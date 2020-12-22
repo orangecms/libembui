@@ -89,6 +89,18 @@ int main(int argc, char *argv[])
         if (SDL_PollEvent(&event)) {
             if (event.type == SDL_KEYDOWN) {
                 switch (event.key.keysym.sym) {
+                case SDLK_LEFT:
+                    shape_fg1.rect.pos.x -= 3;
+                    break;
+                case SDLK_RIGHT:
+                    shape_fg1.rect.pos.x += 3;
+                    break;
+                case SDLK_UP:
+                    shape_fg2.rect.pos.y -= 3;
+                    break;
+                case SDLK_DOWN:
+                    shape_fg2.rect.pos.y += 3;
+                    break;
                 case SDLK_ESCAPE:
                     running = 0;
                     break;
